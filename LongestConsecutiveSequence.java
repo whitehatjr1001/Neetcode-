@@ -7,13 +7,16 @@ public class LongestConsecutiveSequence{
         for(int num :nums)set.add(num);
         for(int num:nums){
             if(!set.contains(num-1)){
+                int count =1;
                 while(set.contains(num+1)){
                     num++;
-                    max++;
+                    count++;
                 }
+                return max = Math.max(count,max);
             }
         }
         return max;
+        
 
     }
     public static void main(String[] args) {
